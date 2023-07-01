@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class=".container .col-8   p-3">
+    <div class="row">
+      <div class="col ">
+        <h4 class="fw-bold"> Nifty: {{nifty.niftyltp}}</h4>
+        <h6> ITM Put Strike : {{nifty.niftyitmput}} </h6>
+        <h6> ITM Call Strike : {{nifty.niftyitmcall}} </h6>
+      </div>
+      <div class="col ">
+        <h4 class="fw-bold"> FinNifty - {{finnifty.finniftyltp}}</h4>
+        <h6> ITM Put Strike : {{finnifty.finniftyitmput}} </h6>
+        <h6> ITM Call Strike : {{finnifty.finniftyitmcall}} </h6>
+      </div>
+      <div class="col">
+        <h4 class="fw-bold"> BankNifty - {{banknifty.bankniftyltp}}</h4>
+        <h6> ITM Put Strike : {{banknifty.bankniftyitmput}} </h6>
+        <h6> ITM Call Strike : {{banknifty.bankniftyitmcall}} </h6>
+      </div>
+      <div class="col">
+        <h4 class="fw-bold"> Profit: +234553.35 +24%</h4>
+      </div>
+    </div>
+</div>
+{% endblock %}

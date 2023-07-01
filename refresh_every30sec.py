@@ -1,0 +1,1 @@
+while true; do python my_script.py; sleep 60; done
