@@ -15,7 +15,13 @@
   <div class="container" id = "content"> 
     {% block content %} 
         <h1>Trade1Click</h1>
-    {% endblock %}
+        {% include "indiceltp.html" %}
+        {% include "hero.html" %}
+        {% include "buy-sell.html" %}
+        {% include "openpositions.html" %}
+        {% include "closedpositions.html" %}
+        
+{% endblock %}
   </div>
 </body>
 

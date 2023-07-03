@@ -36,7 +36,7 @@ async def indexltp(request: Request):
     bankniftyIdx = getOptionStrikes.indiceLTP("banknifty")
     finniftyIdx = getOptionStrikes.indiceLTP("finnifty")
    
-    return templates.TemplateResponse("indiceltp.html", {"request": request, "nifty" : niftyIdx, "banknifty" : bankniftyIdx, "finnifty" : finniftyIdx  })
+    return templates.TemplateResponse("base.html", {"request": request, "nifty" : niftyIdx, "banknifty" : bankniftyIdx, "finnifty" : finniftyIdx  })
 ################################### above section works
 
 
