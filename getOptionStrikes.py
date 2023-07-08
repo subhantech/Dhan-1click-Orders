@@ -7,7 +7,12 @@ import time
 
 
 # Method to get nearest strikes
-def round_nearest(x,num=50): return int(math.floor(float(x)/num)*num)
+# def round_nearest(x,num=50): return int(math.floor(float(x)/num)*num)
+def round_nearest(x,num=100): 
+     if x % num > 50 :
+        return int(math.ceil(float(x)/num)*num)
+     if x % num <= 50 :
+        return int(math.floor(float(x)/num)*num)
 def nearest_strike_bnf(x): return round_nearest(x,100)
 def nearest_strike_nf(x): return round_nearest(x,100)
 def nearest_strike_fnf(x): return round_nearest(x,100)

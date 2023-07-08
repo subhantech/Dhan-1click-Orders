@@ -38,28 +38,9 @@ async def indexltp(request: Request):
    
     return templates.TemplateResponse("base.html", {"request": request, "nifty" : niftyIdx, "banknifty" : bankniftyIdx, "finnifty" : finniftyIdx  })
 ################################### above section works
+# @app.post("/", response_class=HTMLResponse)
+# async def refreshPrices(request : Request):
+#     print ("Hello")
+#     getOptionStrikes.indiceLTP
+#     return templates.TemplateResponse("base.html", {"request": request})
 
-
-# @app.get("/static/", response_class=HTMLResponse)
-
-############# Functions to get option dATA
-
-###############################################################3
-## Using these for testing purposes
-#############################################################
-
-
-# @app.get("/form")
-# def form_post(request: Request):
-#     result = "Type a number"
-#     return templates.TemplateResponse('form.html', context={'request': request, 'result': result})
-
-
-# @app.post("/form")
-# def form_post(request: Request, num: int = Form(...)):
-#     result = num
-#     return templates.TemplateResponse('form.html', context={'request': request, 'result': result})
-
-# @app.get("/items/{id}", response_class=HTMLResponse)
-# async def read_item(request: Request, id: str):
-#     return templates.TemplateResponse("item.html", {"request": request, "id": id})

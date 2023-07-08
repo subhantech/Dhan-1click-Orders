@@ -1,91 +1,94 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container .col-8 p-3">
-    <div class="btn-group ">
-      <button type="button" class="btn btn-outline-secondary">Closed Positions</button>
+    <p>
+      <button type="button" class="btn btn-outline-secondary"  data-bs-target="#closedpositions" data-bs-toggle="collapse", area-controls="closedpositions" aria-expanded="false" >Closed Positions</button>
+    </p>
+    
 
+    <div class="collapse" id="closedpositions">
+      <div class="card card-body">
+
+        <table class='table table-hover p-3 bg-danger-subtle'>
+          <thead>
+            <tr>
+              <th scope='col'>#
+              </th>
+              <th scope='col'>Option Description
+              </th>
+              <th scope='col'>Qty
+              </th>
+              <th scope='col'>Buy Price
+              </th>
+              <th scope='col'>Sell Price
+              </th>
+              <th scope='col'>Profit
+              </th>
+              <th scope='col'>Pct %
+              </th>
+              <th scope='col'>Time Elapsed
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope='row'>1
+              </th>
+              <td>Finnifty 20 Jun 19300 call
+              </td>
+              <td>1200
+              </td>
+              <td>45.25
+              </td>
+              <td>60.35
+              </td>
+              <td>3450.35
+              </td>
+              <td>25 %
+              </td>
+              <td>12 min
+              </td>
+            </tr>
+            <tr>
+              <th scope='row'>2
+              </th>
+              <td>Finnifty 20 Jun 19400 call
+              </td>
+              <td>1000
+              </td>
+              <td>25.25
+              </td>
+              <td>58.25
+              </td>
+              <td>13450.35
+              </td>
+              <td>50 %
+              </td>
+              <td>22 min
+              </td>
+            </tr>
+            <tr>
+              <th scope='row'>3
+              </th>
+              <td>Finnifty 20 Jun 19350 put
+              </td>
+              <td>2000
+              </td>
+              <td>65.25
+              </td>
+              <td>95.25
+              </td>
+              <td>30450.35
+              </td>
+              <td>15 %
+              </td>
+              <td>8 min
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-
-
-    <table class='table table-hover p-3 bg-danger-subtle'>
-      <thead>
-        <tr>
-          <th scope='col'>#
-          </th>
-          <th scope='col'>Option Description
-          </th>
-          <th scope='col'>Qty
-          </th>
-          <th scope='col'>Buy Price
-          </th>
-          <th scope='col'>Sell Price
-          </th>
-          <th scope='col'>Profit
-          </th>
-          <th scope='col'>Pct %
-          </th>
-          <th scope='col'>Time Elapsed
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope='row'>1
-          </th>
-          <td>Finnifty 20 Jun 19300 call
-          </td>
-          <td>1200
-          </td>
-          <td>45.25
-          </td>
-          <td>60.35
-          </td>
-          <td>3450.35
-          </td>
-          <td>25 %
-          </td>
-          <td>12 min
-          </td>
-        </tr>
-        <tr>
-          <th scope='row'>2
-          </th>
-          <td>Finnifty 20 Jun 19400 call
-          </td>
-          <td>1000
-          </td>
-          <td>25.25
-          </td>
-          <td>58.25
-          </td>
-          <td>13450.35
-          </td>
-          <td>50 %
-          </td>
-          <td>22 min
-          </td>
-        </tr>
-        <tr>
-          <th scope='row'>3
-          </th>
-          <td>Finnifty 20 Jun 19350 put
-          </td>
-          <td>2000
-          </td>
-          <td>65.25
-          </td>
-          <td>95.25
-          </td>
-          <td>30450.35
-          </td>
-          <td>15 %
-          </td>
-          <td>8 min
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  </div>
+</div>
 
 {% endblock %}
