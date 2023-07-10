@@ -2,11 +2,13 @@ import polars as plrs
 import polars.selectors as cs
 import getOptionStrikes
 from datetime import datetime,date
+import getExpiryDays
 
 pddf = plrs.read_csv("api-scrip-master.csv")
 
 
-expiry = "2023-06-27"
+#expiry = "2023-06-27"
+expiry = getExpiryDays.nextTuesday
 indice = "FINNIFTY "
 expiry_day = "11 "
 expiry_month = "JUL "
